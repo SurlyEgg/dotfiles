@@ -1,0 +1,22 @@
+#! /bin/sh
+
+if [ $(pgrep -cx panel) -gt 1 ] ; then
+    printf "%s\n" "The panel is already running." >&2
+    exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+bspc config top_padding $PANEL_HEIGHT
+
+bspc control --subscribe > "$PANEL_FIFO" &
+conky -c $HOME/.config/panel/panel_conky > "$PANEL_FIFO" &
+
+. panel_colors
+
+cat "$PANEL_FIFO" | panel_bar | bar -f "-xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1","fixed" -g x$PANEL_HEIGHT -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" &
+
+wait

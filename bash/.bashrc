@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export TERM=xterm-256color
 export PS1="\[\e[00;37m\][\w]\\$ \[\e[0m\]"
 export EDITOR='vim'
 

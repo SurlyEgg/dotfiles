@@ -4,9 +4,6 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-# Set numlock at login
-setleds -D +num
-
 # BAR settings
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=24

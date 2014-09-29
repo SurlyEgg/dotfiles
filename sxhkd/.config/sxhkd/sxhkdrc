@@ -101,7 +101,7 @@ super + {_,shift + }Return
     urxvt -e bash -c "screen -x -R -S main"
 
 super + space
-    `dmenu_run -b -fn '-*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1' -nf '#c5c8c6' -nb '#1d1f21' -sf '#1d1f21' -sb '#c5c8c6'`
+    `dmenu_run -b -fn '-zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1' -nf '#c5c8c6' -nb '#1d1f21' -sf '#1d1f21' -sb '#c5c8c6'`
 
 super + Escape
     pkill -USR1 -x sxhkd

@@ -15,8 +15,7 @@ fi
 
 xset +fp /usr/share/fonts/local &
 xsetroot -cursor_name left_ptr &
-numlockx &
-compton &
+#compton &
 ~/scripts/fehbg.sh &
 sxhkd &
 exec bspwm

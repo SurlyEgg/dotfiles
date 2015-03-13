@@ -7,4 +7,4 @@ update_interval 3
 update_interval_on_battery 3
 
 TEXT
-S $if_mpd_playing $mpd_smart $endif  CPU [${cpubar}] ${freq}MHz ${exec sensors | grep 'Core 0' | awk '{print $3}' | cut -c2-3}°C   MEM [${membar}] ${mem}   ${time %m/%d - %I:%M %p}
+S $if_mpd_playing $mpd_smart $endif  CPU [${cpubar}] ${freq}MHz   MEM [${membar}] ${mem}   BAT [${battery_bar}] $battery_time   ${time %m/%d - %I:%M %p}

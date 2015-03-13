@@ -15,18 +15,18 @@ Xft*lcdfilter: lcddefault
 
 URxvt*termName: rxvt-256color
 URxvt*depth: 32
-!URxvt*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-!URxvt*boldFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-!URxvt*italicFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-!URxvt*bolditalicFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt*boldFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt*italicFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+URxvt*bolditalicFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 !URxvt*font: -misc-tamsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
 !URxvt*boldFont: -misc-tamsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
 !URxvt*italicFont: -misc-tamsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
 !URxvt*bolditalicFont: -misc-tamsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
-URxvt*font: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
-URxvt*boldFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
-URxvt*italicFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
-URxvt*bolditalicFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
+!URxvt*font: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
+!URxvt*boldFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
+!URxvt*italicFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
+!URxvt*bolditalicFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
 
 *background: #1D1F21
 *foreground: #C5C8C6

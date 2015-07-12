@@ -11,4 +11,4 @@ export PANEL_FIFO PANEL_HEIGHT
 export PATH="${PATH}:/home/zander/.config/panel/"
 
 # Start X automatically
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

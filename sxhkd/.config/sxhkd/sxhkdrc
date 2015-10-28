@@ -1,98 +1,81 @@
+#
+# bspwm hotkeys
+#
+
 super + alt + Escape
-  bspc quit
+  pkill -x panel; bspc quit
 
-# Close window
 super + w
-  bspc window -c
+	bspc window -c
 
-# Toggle tile
 super + t
-  bspc desktop -l next
+	bspc desktop -l next
 
-# Balance windows
 super + b
-  bspc desktop -B
+	bspc desktop -B
 
-# Toggle floating or fullscreen
 super + {s,f}
-  bspc window -t {floating,fullscreen}
+	bspc window -t {floating,fullscreen}
 
-# Previous window
 super + {grave,Tab}
-  bspc {window,desktop} -f last
+	bspc {window,desktop} -f last
 
 super + apostrophe
-  bspc window -s last
+	bspc window -s last
 
 super + {o,i}
-  bspc control --record-history off; \
-  bspc window {older,newer} -f; \
-  bspc control --record-history on
+	bspc control --record-history off; \
+	bspc window {older,newer} -f; \
+	bspc control --record-history on
 
 super + y
-  bspc window -w last.manual
+	bspc window -w last.manual
 
-# Move window to largest space
 super + m
-  bspc window -s biggest
+	bspc window -s biggest
 
 super + {_,shift + }{h,j,k,l}
-  bspc window -{f,s} {left,down,up,right}
+	bspc window -{f,s} {left,down,up,right}
 
 super + {_,shift + }c
-  bspc window -f {next,prev}
+	bspc window -f {next,prev}
 
-# Rotate leaves of tree
 super + {comma,period}
-  bspc desktop -C {backward,forward}
+	bspc desktop -C {backward,forward}
 
-# Select next / previous desktop
 super + bracket{left,right}
-  bspc desktop -f {prev,next}
+	bspc desktop -f {prev,next}
 
 super + ctrl + {h,j,k,l}
-  bspc window -p {left,down,up,right}
+	bspc window -p {left,down,up,right}
 
 super + ctrl + {_,shift + }space
-  bspc {window -p cancel,desktop -c}
+	bspc {window -p cancel,desktop -c}
 
 super + alt + {h,j,k,l}
-  bspc window -e {left -10,down +10,up -10,right +10}
+	bspc window -e {left -10,down +10,up -10,right +10}
 
 super + alt + shift + {h,j,k,l}
-  bspc window -e {right -10,up +10,down -10,left +10}
+	bspc window -e {right -10,up +10,down -10,left +10}
 
 super + ctrl + {1-9}
-  bspc window -r 0.{1-9}
+	bspc window -r 0.{1-9}
 
 super + {_,shift + }{1-9,0}
-  bspc {desktop -f,window -d} ^{1-9,10}
-
-# Change size of useless gap
-alt + {minus,equal}
-  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
-
-# Resize windows
-alt + {a,f}
-    S={+,-}; \
-    bspc window -e left $\{S\}20 || \
-    bspc window -e right $\{S\}20
-alt + {s,d}
-    S={+,-}; \
-    bspc window -e down $\{S\}20 || \
-    bspc window -e up $\{S\}20
+	bspc {desktop -f,window -d} ^{1-9,10}
 
 ~button1
-  bspc pointer -g focus
+	bspc pointer -g focus
 
 super + button{1-3}
-  bspc pointer -g {move,resize_side,resize_corner}
-
-super + !button{1-3}
-  bspc pointer -t %i %i
+	; bspc pointer -g {move,resize_side,resize_corner}
 
 super + @button{1-3}
-  bspc pointer -u
+	bspc pointer -u
+
+#
+# wm independent hotkeys
+#
 
 super + Return
     urxvt
@@ -101,7 +84,7 @@ super + {_,shift + }Return
     urxvt -e bash -c "screen -x -R -S main"
 
 super + space
-    `dmenu_run -b -fn '-zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1' -nf '#c5c8c6' -nb '#1d1f21' -sf '#1d1f21' -sb '#c5c8c6'`
+    `dmenu_run -b -fn '$PANEL_FONT_FAMILY' -nf '#c5c8c6' -nb '#1d1f21' -sf '#1d1f21' -sb '#c5c8c6'`
 
 super + Escape
     pkill -USR1 -x sxhkd

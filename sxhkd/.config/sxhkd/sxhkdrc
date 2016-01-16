@@ -84,7 +84,7 @@ super + {_,shift + }Return
     urxvt -e bash -c "screen -x -R -S main"
 
 super + space
-    `dmenu_run -b -fn '$PANEL_FONT_FAMILY' -nf '#c5c8c6' -nb '#1d1f21' -sf '#1d1f21' -sb '#c5c8c6'`
+    `dmenu_run -b -fn '-*-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1' -nf '#c5c8c6' -nb '#1d1f21' -sf '#1d1f21' -sb '#c5c8c6'`
 
 super + Escape
     pkill -USR1 -x sxhkd

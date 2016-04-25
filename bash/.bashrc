@@ -6,7 +6,6 @@
 [[ $- != *i* ]] && return
 
 export TERM=xterm-256color
-export PS1="\[\e[00;37m\][\w]\\$ \[\e[0m\]"
 export EDITOR='vim'
 
 set -o vi
@@ -20,9 +19,6 @@ alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 alias ping='ping -c 5'
 alias dmesg='dmesg -HL'
-alias reflector='sudo reflector --verbose --country "United States" -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist'
-alias paccache='sudo paccache -vruk0'
-alias pacupdate='sudo pacmatic -Syu && pacaur -u'
 # }}}
 
 ## ls ## {{{
@@ -40,18 +36,12 @@ alias lm='la | more'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -I'                    # 'rm -i' prompts for every file
-# safer alternative w/ timeout, not stored in history
-alias rm=' timeout 3 rm -Iv --one-file-system'
 alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
-alias cls=' echo -ne "\033c"'       # clear screen for real (it does not work in Terminology)
 # }}}
 
-## Make Bash error tolerant ## {{{
-alias :q=' exit'
-alias :Q=' exit'
-alias :x=' exit'
-alias cd..='cd ..'
-# }}}
+alias paccache='sudo paccache -vruk0'
+alias pacupdate='sudo pacmatic -Syu && pacaur -u'
+alias pacreflector='sudo reflector --verbose --country "United States" -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist'

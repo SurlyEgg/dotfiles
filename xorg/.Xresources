@@ -1,10 +1,8 @@
-Xft*dpi: 109
-Xft*autohint: 0
-Xft*antialias: 1
-Xft*rgba: rgb
-Xft*hinting: 1
-Xft*hintstyle: hintslight
-Xft*lcdfilter: lcddefault
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfull
 
 *loginShell: true
 *scrollBar: false
@@ -12,45 +10,46 @@ Xft*lcdfilter: lcddefault
 *saveLines: 65535
 *cursorBlink: false
 *urgentOnBell: true
+*highlightSelection: true
 
 URxvt*termName: rxvt-256color
 URxvt*depth: 32
-URxvt*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt*boldFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt*italicFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-URxvt*bolditalicFont: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-!URxvt*font: -misc-tamsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
-!URxvt*boldFont: -misc-tamsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
-!URxvt*italicFont: -misc-tamsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
-!URxvt*bolditalicFont: -misc-tamsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
-!URxvt*font: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
-!URxvt*boldFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
-!URxvt*italicFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
-!URxvt*bolditalicFont: -zevv-peep-medium-r-normal--16-140-75-75-c-80-iso8859-1
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=13
+URxvt*boldFont: xft:DejaVu Sans Mono:pixelsize=13:style=Bold
 
-*background: #1D1F21
-*foreground: #C5C8C6
+! special
+*.foreground:   #d0d0d0
+*.background:   #151515
+*.cursorColor:  #d0d0d0
+
 ! black
-*color0: #282A2E
-*color8: #373B41
+*.color0:       #151515
+*.color8:       #505050
+
 ! red
-*color1: #A54242
-*color9: #CC6666
+*.color1:       #ac4142
+*.color9:       #ac4142
+
 ! green
-*color2: #8C9440
-*color10: #B5BD68
+*.color2:       #90a959
+*.color10:      #90a959
+
 ! yellow
-*color3: #DE935F
-*color11: #F0C674
+*.color3:       #f4bf75
+*.color11:      #f4bf75
+
 ! blue
-*color4: #5F819D
-*color12: #81A2BE
+*.color4:       #6a9fb5
+*.color12:      #6a9fb5
+
 ! magenta
-*color5: #85678F
-*color13: #B294BB
+*.color5:       #aa759f
+*.color13:      #aa759f
+
 ! cyan
-*color6: #5E8D87
-*color14: #8ABEB7
+*.color6:       #75b5aa
+*.color14:      #75b5aa
+
 ! white
-*color7: #707880
-*color15: #C5C8C6
+*.color7:       #d0d0d0
+*.color15:      #f5f5f5

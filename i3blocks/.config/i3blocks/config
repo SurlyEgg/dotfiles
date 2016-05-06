@@ -45,6 +45,7 @@ separator=false
 # see the script for details.
 [temperature]
 label=TEMP
+command=sensors | grep "Core 0:" | cut -c18-21 | sed 's/$/°C/'
 interval=10
 
 # Memory usage

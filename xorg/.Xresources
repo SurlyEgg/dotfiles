@@ -14,8 +14,8 @@ Xft.hintstyle: hintfull
 
 URxvt*termName: rxvt-256color
 URxvt*depth: 32
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=13
-URxvt*boldFont: xft:DejaVu Sans Mono:pixelsize=13:style=Bold
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=14
+URxvt*boldFont: xft:DejaVu Sans Mono:pixelsize=14:style=Bold
 
 ! special
 *.foreground:   #d0d0d0
